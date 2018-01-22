@@ -55,6 +55,7 @@ int main()
 
 	Mat dst;
 
+	waitKey(0);
 	int angle = 0;
 	while (true)			//无舍入误差的旋转
 	{
@@ -72,7 +73,7 @@ int main()
 	while (true)			//旋转带来的累计的舍入误差效果
 	{
 		RotateMat(img, img, 1);
-		imshow("excited2", img);
+		imshow("excited", img);
 		char c = waitKey(10);	//esc结束旋转
 		if (c == 27)
 			break;
@@ -80,3 +81,4 @@ int main()
 
 	waitKey(0);
 	return 0;
+}
